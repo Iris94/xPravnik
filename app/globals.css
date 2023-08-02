@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.heroRotation {
+  color: #BEB41A;
+  background-color: #002035;
+}
+
+.footerArrow {
+  clip-path: polygon(
+    0%      0%,
+    48%     0%,
+    50%     100%,
+    52%     0%,
+    100%    0%,
+    100%    100%,
+    0%      100%
+  );
+}
+
+@font-face {
+  font-family: 'eurostile';
+  src: url('./../public/eurostile.TTF') format('truetype');
+}
+
+body {
+  font-family: 'eurostile';
+  color: #002035
+}
+
+
+@media (min-width: 768px) {
+  .heroRotation {
+    clip-path: polygon(0% 0%, 75% 0%, 0% 75%);
+    position: absolute;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%
+  };
+}
+
+.centerHeader {
+  position: relative;
+  top: 25%
+}
+
+.animaHeader {
+  animation: moveHeader 1s ease-in-out forwards
+}
+
+@keyframes moveHeader {
+  from {
+    position: relative;
+    top: 25%
+  } to {
+    position: relative;
+    top: 0;
+  }
+}
+
+.animaMain {
+  animation: showMain 2s ease-out forwards
+}
+
+@keyframes showMain {
+  0% {
+    opacity: 0
+  } 50% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}
+
+.slideFirst {
+  animation: slideFirstAnima 11s forwards alternate infinite
+}
+
+@keyframes slideFirstAnima {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  } 20% {
+    opacity: 1;
+    transform: translate(0%);
+  } 80% {
+    opacity: 1;
+    transform: translate(0%);
+  } 100% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+}
+
+.slideSecond {
+  animation: slideSecondAnima 11s forwards alternate infinite
+}
+
+@keyframes slideSecondAnima {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  } 20% {
+    opacity: 1;
+    transform: translate(0%);
+  } 80% {
+    opacity: 1;
+    transform: translate(0%);
+  } 100% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+}
