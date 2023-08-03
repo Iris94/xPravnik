@@ -13,7 +13,7 @@ const Tutorial = () => {
           <Image
             src='/tutor.png'
             alt='tutorial'
-            layout='fill'
+            fill
             objectFit='contain'
             objectPosition='center'
           />
