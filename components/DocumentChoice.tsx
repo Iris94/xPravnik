@@ -21,12 +21,13 @@ const DocumentChoice = () => {
   };
 
   return (
-    <section className='w-screen h-screen flex justify-center items-center p-5 flex-col md:overflow-hidden'>
-      <div className={`w-full h-1/5 flex justify-center items-center flex-col ${selectedOption === '' ? 'centerHeader' : 'animaHeader'}`}>
-        <div className='w-full h-1/2 flex items-center justify-center'>
+    <section className='w-screen heightMobile lg:h-fit flex justify-start lg:justify-center gap-2 lg:gap-0 items-center p-2 lg:p-5 flex-col lg:overflow-hidden'>
+
+      <div className={`w-full h-fit gap-3 lg:gap-3 flex justify-center items-center flex-col ${selectedOption === '' ? 'centerHeader' : 'animaHeader'}`}>
+        <div className='w-full h-1/3 flex items-center justify-center'>
             <h2 className='text-l md:text-2xl lg:text-4xl xl:text-5xl font-bold'>Izaberite Dokument</h2> 
         </div>
-        <div className='w-1/3 h-1/2 flex justify-center items-center gap-4'>
+        <div className='w-full lg:w-1/3 h-1/2 flex justify-center items-start lg:items-center gap-2'>
             <select value={selectedOption} onChange={handleSelectChange} className='text-l md:text-xl'>
             <option value="" disabled className='text-center'>
             Sudski
@@ -37,11 +38,11 @@ const DocumentChoice = () => {
             </option>
             ))}
             </select>
-            <hr className='bg-orange_law w-1 h-10' />
+            <hr className='bg-orange_law w-1 h-10 relative bottom-2 lg:bottom-0' />
         </div>
       </div>
 
-      <div className={`w-full h-screen flex flex-col md:flex-row gap-1 justify-center items-center p-5 ${selectedOption === '' ? '' : 'animaMain'}`}>
+      <div className={`w-full lg:h-screen h-fit flex flex-col lg:flex-row gap-1 justify-center items-center lg:p-2 p-4 ${selectedOption === '' ? '' : 'animaMain'}`}>
           {renderSelectedOptionContent(selectedOption)}
       </div>
     </section>

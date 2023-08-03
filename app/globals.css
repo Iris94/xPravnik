@@ -126,3 +126,15 @@ body {
     transform: translateX(-150%);
   }
 }
+
+.heightMobile {
+  height: 250vh
+}
+
+.heightNormal {
+  height: 120vh
+}
+
+.mobileText {
+  height: 45vmax
+}

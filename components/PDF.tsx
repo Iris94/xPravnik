@@ -87,7 +87,7 @@ const PDF: React.FC<PDFProps> = ( {formData, selectedOption} ) => {
       </div>
     </div>
     <div className='flex h-1/5 w-full justify-center items-start'>
-    <button className='w-1/3 h-1/3 text-white bg-orange_law font-bold rounded-md' onClick={handlePrint}>Skini u PDF-u</button>
+    <button className='w-1/2 h-1/3 text-white bg-orange_law font-bold rounded-md' onClick={handlePrint}>Skini u PDF-u</button>
     </div>
   </div>
   )
