@@ -11,11 +11,10 @@ const Tutorial = () => {
         <div className='w-full h-full flex justify-center items-center p-5'>
         <div className='relative' style={{ width: '80vmin', height: '50vmin' }}>
           <Image
-            src='/tutor.png'
+            src='/tutor.PNG'
             alt='tutorial'
             fill
             objectFit='contain'
-            objectPosition='center'
           />
           </div>
         </div>
