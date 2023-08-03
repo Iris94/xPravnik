@@ -5,6 +5,7 @@ import Sudski from "./Sudski";
 import PDF from "./PDF";
 import JusticarForm from "./JusticarForm";
 import Chat from "./Chat";
+import Tutorial from "./Tutorial";
 
 export {
     Hero,
@@ -13,5 +14,6 @@ export {
     Sudski,
     PDF,
     JusticarForm,
-    Chat
+    Chat,
+    Tutorial
 }
